@@ -1,55 +1,63 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Address{
+class Address
+{
 
-    private:
+private:
     string building;
     string street;
     string city;
     int pin;
 
-    public: 
-
-    Address(){
-        building= "Null";
-        street="Null";
-        city= "Null";
-        pin= 000000;
+public:
+    Address()
+    {
+        building = "Null";
+        street = "Null";
+        city = "Null";
+        pin = 000000;
     }
 
-    Address(string building, string street, string city, int pin){
-        this->building= building;
-        this->street=street;
-        this->city= city;
-        this->pin=pin;
+    Address(string building, string street, string city, int pin)
+    {
+        this->building = building;
+        this->street = street;
+        this->city = city;
+        this->pin = pin;
     }
 
-    void setBuilding(string building){
-        this->building=building;
+    void setBuilding(string building)
+    {
+        this->building = building;
     }
 
-    string getBuilding(){
-       
+    string getBuilding()
+    {
+
         return this->building;
     }
 
-    void setStreet(string street){
-       
-       this->street=street;
+    void setStreet(string street)
+    {
+
+        this->street = street;
     }
 
-    string getStreet(){
-       
+    string getStreet()
+    {
+
         return this->street;
     }
 
-    void setCity(string city){
-       this->city=city;
+    void setCity(string city)
+    {
+        this->city = city;
     }
 
-    string getCity(){
-    
+    string getCity()
+    {
+
         return this->city;
     }
 
@@ -59,13 +67,13 @@ class Address{
     // }
     void setPin(int pin)
     {
-        this->pin=pin;
-
+        this->pin = pin;
     }
 
-    int getPin(){
+    int getPin()
+    {
         return this->pin;
-    }   
+    }
 };
 
 // void displayAddress(){
@@ -75,7 +83,8 @@ class Address{
 //     void getPin();
 // }
 
-int main(){
+int main()
+{
     Address a;
     Address a1("Sunbeam", "Phase 2", "Pune", 411057);
 
@@ -85,7 +94,7 @@ int main(){
     a.setCity("Sangli");
     a.setPin(416415);
 
-    //displayAddress();
+    // displayAddress();
     cout << a.getBuilding() << endl;
     cout << a.getStreet() << endl;
     cout << a.getCity() << endl;

@@ -1,22 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Date{
-    private:
-    int d,m,y;
+class Date
+{
+private:
+    int d, m, y;
 
-    public:
-    Date(){
-
+public:
+    Date()
+    {
     }
 
-    Date(int d, int m, int y){
-        this->d=d;
-        this->m=m;
-        this->m=y;
+    Date(int d, int m, int y)
+    {
+        this->d = d;
+        this->m = m;
+        this->m = y;
     }
 
-    void acceptDate(){
+    void acceptDate()
+    {
         cout << "Enter day: ";
         cin >> d;
         cout << "Enter month: ";
@@ -25,35 +28,39 @@ class Date{
         cin >> y;
     }
 
-    void displayDate(){
+    void displayDate()
+    {
         cout << "Date: " << d << "/" << m << "/" << y;
     }
-
 };
 
-class Person{
-    protected:
+class Person
+{
+protected:
     string name, addr;
     Date date_of_birth;
 
-    public:
-    Person(){
-
+public:
+    Person()
+    {
     }
 
-    Person(string name, Date date_of_birth){
-        this->name= name;
-        this->date_of_birth=date_of_birth;
+    Person(string name, Date date_of_birth)
+    {
+        this->name = name;
+        this->date_of_birth = date_of_birth;
     }
 
-    void acceptPerson(){
+    void acceptPerson()
+    {
         cout << "Enter name: ";
         cin >> name;
         cout << "Enter birth date: " << endl;
         date_of_birth.acceptDate();
     }
 
-    void displayPerson(){
+    void displayPerson()
+    {
         cout << "Name: " << name << endl;
         cout << "Birth date: " << endl;
         date_of_birth.displayDate();
@@ -61,31 +68,35 @@ class Person{
     }
 };
 
-class Employee : public Person{
-    private:
+class Employee : public Person
+{
+private:
     int id;
     double sal;
     string dept;
     Date date_of_joining;
 
-    public:
-    Employee(){
-
+public:
+    Employee()
+    {
     }
 
-    Employee(int id, Date date_of_joining){
-        this->id=id;
-        this->date_of_joining=date_of_joining;
+    Employee(int id, Date date_of_joining)
+    {
+        this->id = id;
+        this->date_of_joining = date_of_joining;
     }
 
-    void acceptEmployee(){
+    void acceptEmployee()
+    {
         cout << "Enter id: ";
         cin >> id;
         cout << "Enter date of joining: " << endl;
-        date_of_joining.acceptDate(); 
+        date_of_joining.acceptDate();
     }
 
-    void displayEmployeee(){
+    void displayEmployeee()
+    {
         cout << "Name: " << name << endl;
         cout << "id: " << id << endl;
         cout << "Date of joining: " << endl;
@@ -94,7 +105,8 @@ class Employee : public Person{
     }
 };
 
-int main(){
+int main()
+{
 
     Employee e;
     e.acceptPerson();
@@ -105,7 +117,6 @@ int main(){
     cout << "--------------------------------------" << endl;
     e.displayEmployeee();
     cout << "--------------------------------------" << endl;
-
 
     return 0;
 }
